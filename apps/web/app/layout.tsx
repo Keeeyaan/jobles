@@ -5,12 +5,14 @@ import "@/app/globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Providers } from "@/components/provider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jobles - Manage Your Job Applications",
-  description: "Track and manage all your job applications in one place",
+  description:
+    "Land a job faster by tracking, analyzing, and guiding your applications.",
 };
 
 export default function RootLayout({
@@ -28,7 +30,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Toaster richColors />
-            {children}
+            <TooltipProvider>{children}</TooltipProvider>
           </ThemeProvider>
         </Providers>
       </body>
