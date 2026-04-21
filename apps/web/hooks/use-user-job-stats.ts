@@ -11,7 +11,7 @@ type JobStats = {
   rejected: number;
 };
 
-export function useJobStats() {
+export function useUserJobStats() {
   return useQuery({
     queryKey: ["job-stats"],
     queryFn: () => apiFetch<JobStats>("/jobs/stats"),
