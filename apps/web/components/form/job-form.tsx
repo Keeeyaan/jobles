@@ -29,7 +29,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { CountryDropdown } from "../ui/country-dropdown";
 import { LoadingSwap } from "../loading-swap";
 import { toast } from "sonner";
-import { useCreateJob } from "@/hooks/useCreateJob";
+import { useCreateJob } from "@/hooks/use-create-job";
 import { CreateJobSchema } from "@repo/schemas";
 
 interface JobFormModalProps {
