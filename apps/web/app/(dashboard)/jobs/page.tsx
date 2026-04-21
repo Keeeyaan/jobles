@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { JobCard } from "@/components/job-card";
 import { JobFormModal } from "@/components/form/job-form";
-import { useUserJobs } from "@/hooks/useGetUserJobs";
+import { useUserJobs } from "@/hooks/use-user-jobs";
 
 const STATUS_FILTERS = [
   "all",
@@ -39,30 +39,21 @@ export default function JobsPage() {
 
   return (
     <div className="space-y-6 p-8">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold">Jobs</h1>
-          <p className="text-sm text-muted-foreground">
-            Track your applications
-          </p>
+      {/* Search and Add Job */}
+      <div className="flex items-center gap-4">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search jobs..."
+            className="pl-9"
+          />
         </div>
-
         <Button onClick={() => setFormOpen(true)} className="gap-2">
           <Plus className="h-4 w-4" />
           Add Job
         </Button>
-      </div>
-
-      {/* Search */}
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search jobs..."
-          className="pl-9"
-        />
       </div>
 
       {/* Filters */}
