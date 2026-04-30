@@ -10,7 +10,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jobles - Manage Your Job Applications",
+  title: "QaseAI - Manage Your Job Applications",
   description:
     "Land a job faster by tracking, analyzing, and guiding your applications.",
 };

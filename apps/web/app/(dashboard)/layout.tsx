@@ -16,11 +16,11 @@ export default function DashboardLayout({
         } as React.CSSProperties
       }
     >
-      <AppSidebar variant="inset" />
+      <AppSidebar variant="sidebar" />
       <SidebarInset>
         <Header />
         <div className="flex flex-1 flex-col">
-          <div className="@container/main flex flex-1 flex-col gap-2">
+          <div className="@container/main flex flex-1 flex-col gap-2 bg-card">
             {children}
           </div>
         </div>

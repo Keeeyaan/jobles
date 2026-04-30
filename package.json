@@ -1,5 +1,5 @@
 {
-  "name": "jobles",
+  "name": "qaseai",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -14,7 +14,7 @@
     "turbo": "^2.9.3",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.2",
   "engines": {
     "node": ">=18"
   }

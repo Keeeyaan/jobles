@@ -8,9 +8,14 @@ async function bootstrap() {
     bodyParser: false,
   });
 
+  app.enableCors({
+    origin: process.env.WEB_URL,
+    credentials: true,
+  });
+
   const config = new DocumentBuilder()
-    .setTitle('Jobles API')
-    .setDescription('Jobles API description')
+    .setTitle('QaseAI API')
+    .setDescription('QaseAI API description')
     .setVersion('1.0')
     .build();
 
@@ -18,6 +23,6 @@ async function bootstrap() {
   const document = cleanupOpenApiDoc(rawDocument);
   SwaggerModule.setup('api', app, document);
 
-  await app.listen(process.env.PORT ?? 3001);
+  await app.listen(process.env.PORT ?? 3002);
 }
 void bootstrap();

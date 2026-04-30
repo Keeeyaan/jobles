@@ -9,6 +9,13 @@ import {
   IconDashboard,
   IconBriefcase2,
   IconInnerShadowTop,
+  IconLayoutDashboard,
+  IconFileCode,
+  IconHistory,
+  IconReportAnalytics,
+  IconHome,
+  IconFolder,
+  IconCode,
 } from "@tabler/icons-react";
 
 import {
@@ -30,17 +37,22 @@ const nav = {
     {
       title: "Dashboard",
       url: "/",
-      icon: IconDashboard,
+      icon: IconLayoutDashboard,
     },
     {
-      title: "Jobs",
-      url: "/jobs",
-      icon: IconBriefcase2,
+      title: "Test Cases",
+      url: "/folder",
+      icon: IconFolder,
     },
     {
-      title: "Analytics",
-      url: "/analytics",
-      icon: IconChartBar,
+      title: "Test Runs",
+      url: "/test-runs",
+      icon: IconCode,
+    },
+    {
+      title: "Reports",
+      url: "/reports",
+      icon: IconReportAnalytics,
     },
   ],
   navSecondary: [
@@ -71,7 +83,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <Link href="/">
                 <IconInnerShadowTop className="size-5!" />
-                <span className="text-base font-semibold">Jobles</span>
+                <span className="text-base font-semibold">QaseAI</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

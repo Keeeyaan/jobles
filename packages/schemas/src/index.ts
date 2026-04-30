@@ -1,10 +1,17 @@
 export {
-  JobType,
-  JobStatus,
-  JobSchema,
-  CreateJobSchema,
-  UpdateJobSchema,
-  JobResponseSchema,
-} from "./job.schema";
+  FolderSchema,
+  CreateFolderSchema,
+  RenameFolderSchema,
+  DeleteFolderSchema,
+  FolderResponseSchema,
+  FolderTreeResponseSchema,
+} from "./folder.schema";
 
-export type { Job, CreateJob, UpdateJob, JobResponse } from "./job.schema";
+export type {
+  Folder,
+  CreateFolder,
+  RenameFolder,
+  DeleteFolder,
+  FolderResponse,
+  FolderTreeResponse,
+} from "./folder.schema";

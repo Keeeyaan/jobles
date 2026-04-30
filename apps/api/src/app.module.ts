@@ -6,10 +6,10 @@ import { AuthGuard, AuthModule } from '@thallesp/nestjs-better-auth';
 import { NodePgDatabase } from 'drizzle-orm/node-postgres';
 import { betterAuth } from 'better-auth';
 
-import { JobsModule } from './jobs/jobs.module';
 import { DatabaseModule, DRIZZLE } from './database/database.module';
-import { UsersModule } from './users/users.module';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import { FoldersModule } from './folders/folders.module';
+import { TestCasesModule } from './test-cases/test-cases.module';
 
 @Module({
   imports: [
@@ -27,8 +27,8 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle';
       }),
       inject: [DRIZZLE, ConfigService],
     }),
-    JobsModule,
-    UsersModule,
+    FoldersModule,
+    TestCasesModule,
   ],
   providers: [
     {
